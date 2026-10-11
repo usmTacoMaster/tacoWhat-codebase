@@ -993,7 +993,8 @@ void handleStatus() {
   String j = "{\"distance\":" + String(distanceCm) +
              ",\"blocked\":" + (blocked ? "true" : "false") +
              ",\"left\":" + String(leftNow) +
-             ",\"right\":" + String(rightNow) + "}";
+             ",\"right\":" + String(rightNow) +
+             ",\"phones\":" + String(WiFi.softAPgetStationNum()) + "}";
   sendText(200, "application/json", j);
 }
 
